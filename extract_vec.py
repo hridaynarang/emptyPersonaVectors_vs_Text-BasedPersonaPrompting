@@ -9,11 +9,11 @@ import json
 #extracting the data from each of the json files above
 
 
-agree_path = ""
-conscientious_path = ""
-extraversion_path = ""
-neuroticism_path = ""
-openness_path = ""
+agree_path = "agreeableness_dataset.json"
+conscientious_path = "conscientiousness_dataset.json"
+extraversion_path = "extraversion_dataset.json"
+neuroticism_path = "neuroticism_dataset.json"
+openness_path = "openness_dataset.json"
 
 #agreeablness
 agree_data = []
@@ -88,6 +88,7 @@ for i in range(len(openness_data['instruction'])):
     openness_neg_instructions.append({'role': 'user', 'content': openness_data['instruction'][i]['neg']})
 
 openness_questions = [{'role': 'user', 'content': open_question} for open_question in openness_data['questions']]
+
 
 
 
